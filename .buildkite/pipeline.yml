@@ -1,3 +1,3 @@
 steps:
   - label: ":hammer: Example Script"
-    command: "buildkite-agent meta-data get buildkite:webhook"
+    command: "buildkite-agent meta-data get buildkite:webhook --debug --debug-http --trace-http --log-level debug"
