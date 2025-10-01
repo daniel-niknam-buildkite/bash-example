@@ -1,3 +1,7 @@
 steps:
   - label: ":hammer: Example Script"
-    command: "buildkite-agent meta-data get buildkite:webhook --debug --debug-http --trace-http --log-level debug"
+    command: |
+      WEBHOOK="$(buildkite-agent meta-data get buildkite:webhook)"
+      ISSUE_TITLE="$(jq .head_commit.message <<< ${WEBHOOK})"
+      echo $ISSUE_TITLE
+
