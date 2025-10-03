@@ -2,6 +2,7 @@ set -eo pipefail
 
 echo "--- :package: Fetch Metadata"
 WEBHOOK="$(buildkite-agent meta-data get buildkite:webhook)"
+echo $WEBHOOK
 
 echo "--- :evergreen_tree: Extract head commit message"
 ISSUE_TITLE="$(echo ${WEBHOOK} | jq .head_commit.message)"
