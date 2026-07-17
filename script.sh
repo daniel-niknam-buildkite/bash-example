@@ -5,11 +5,9 @@ echo "--- :package: Build job checkout directory"
 pwd
 ls -la
 
-
 echo "--- :evergreen_tree: Build job environment"
 
 env
-
 
 echo "+++ :hammer: Example tests"
 
@@ -22,7 +20,6 @@ If you have any questions or need help email support@buildkite.com, we'd be happ
 \033[31m<3\033[0m Buildkite
 "
 
-
 echo "+++ :frame_with_picture: Inline image uploaded as a build artifact"
 
 function inline_image {
@@ -30,3 +27,5 @@ function inline_image {
 }
 
 inline_image 'artifact://artifacts/image.gif' 'Rainbows'
+
+echo "+++ 998 baby"
